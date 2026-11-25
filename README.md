@@ -1,5 +1,7 @@
 # dsh-opencode-session-header
 
+[![verify](https://github.com/Azincc/dsh-opencode-session-header/actions/workflows/verify.yml/badge.svg)](https://github.com/Azincc/dsh-opencode-session-header/actions/workflows/verify.yml)
+
 A [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) Host bundle that adds the
 `x-opencode-session` HTTP header — carrying the id of the DSH session that made the call — to
 LLM requests, so a CPA / OpenCode Go gateway can route and bill each conversation separately.
