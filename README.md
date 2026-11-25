@@ -101,7 +101,9 @@ new session, and confirm the mock sees one id reused and one new id.
 ## License
 
 MIT. Derived from [homily707/dsh-session-header](https://github.com/homily707/dsh-session-header)
-0.2.1; see [LICENSE](LICENSE) for both copyright notices and the list of changes.
+0.2.1 (MIT); see [LICENSE](LICENSE). Changes from upstream: injection through the
+`llm-pi-ai/request-headers` waterfall instead of a `globalThis.fetch` patch, no
+`@deepseek-ai/schemastery` dependency, and the provider / endpoint / model-prefix gates.
 
 ---
 

@@ -3,11 +3,6 @@ MIT License
 Copyright (c) 2026 homily707
 Copyright (c) 2026 Azincc
 
-This package is derived from homily707/dsh-session-header 0.2.1 (MIT). The
-modifications are: injection through the `llm-pi-ai/request-headers` waterfall
-instead of a `globalThis.fetch` patch, no `@deepseek-ai/schemastery` dependency,
-and provider / endpoint / model-prefix gates.
-
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
