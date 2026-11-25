@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Gateway session header",
+    "description": "Sends x-opencode-session with the current DSH session id on requests to the configured gateway, so CPA / OpenCode Go can route each call.",
+    "detail": "docs/DETAIL.md"
+  }
+}

@@ -1,0 +1,13 @@
+# Bundle patch layer: mounts this package's Host plugin.
+#
+# `header` is the wire header the OpenCode Go route requires; `modelPrefixes`
+# scopes injection to the `go/*` models (other gateway models do not use it and
+# must not receive it). Add `endpoints` / `providers` if the header should be
+# narrowed further.
+- insert:
+    - id: session-header
+      name: '@local/dsh-session-header'
+      config:
+        header: x-opencode-session
+        modelPrefixes:
+          - go/

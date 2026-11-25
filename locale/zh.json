@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "网关会话头",
+    "description": "向配置的网关请求附加 x-opencode-session，携带当前 DSH 会话 id，供 CPA / OpenCode Go 按会话路由。",
+    "detail": "docs/DETAIL.md"
+  }
+}
