@@ -35,6 +35,7 @@
     "verify-local.mjs",
     "locale/*.json",
     "docs",
+    "examples",
     "icon.svg",
     "README.md",
     "LICENSE"

@@ -67,13 +67,33 @@ Edit the patch after installing, then reload the profile. `endpoints`, `provider
 Requires a DSH build whose `dsh-llm-pi-ai` exposes the `llm-pi-ai/request-headers` waterfall
 (verified on DSH 0.2.2-rc.5 Desktop).
 
-1. Clone this repository somewhere stable.
-2. In DSH, open **Plugins** → **Add plugin** and pick the cloned directory, or run
-   `plugin_manager` `install_bundle` with its absolute path.
-3. Keep the directory where it is: a local directory install is a `link:` dependency, so moving or
-   deleting it disables the plugin.
+**From the repository URL (no clone):** in DSH open **Plugins** → **Add plugin**, paste
+`https://github.com/Azincc/dsh-opencode-session-header`, and press **Install**. The dialog accepts a
+Git address, a tarball, a local directory, or a registry package name. An agent with the
+`plugin_manager` tool can do the same with `install_bundle` and that URL as `target`.
 
-The package is intentionally named `@local/dsh-session-header` and is not published to npm.
+**From a clone:** pick the cloned directory in **Add plugin**, or install it by path.
+
+**One-click via a registry** (recommended for sharing): publish the package to npm and the same
+dialog accepts a bare package name — and a mainland-China mirror can serve it, which a GitHub
+address cannot. A plugin index (**Discover** tab) is the only true one-click route: an entry there
+installs without typing anything.
+
+Keep an installed copy where it lands: a local directory install is a `link:` dependency, so moving
+or deleting it disables the plugin.
+
+The package carries the local-install name `@local/dsh-session-header` for the convention this
+bundle was built with; publishing it to npm would pick a public name and update
+`cordis.patch.yml` and the install dialog's package field accordingly.
+
+### Set up the provider too
+
+The header alone does not create a model. To use `go/deepseek-v4.1-flash` through the gateway, merge
+[`examples/provider-cpa-go.yml`](examples/provider-cpa-go.yml) into your profile's
+`llm-pi-ai.config.providers`, store the key under the credential name it references (`CPA_API_KEY`),
+and reload. That file is the tested provider block: `baseURL`, model id, capacities, and the
+`compat` switches a DeepSeek reasoning model needs behind an OpenAI-compatible gateway.
+
 
 ## Verify
 
